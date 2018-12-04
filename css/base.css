@@ -1,0 +1,353 @@
+/* 
+// Table of content
+// -----------------------------------------------------------------------------
+/* -----------------------------------------------------------------------------
+// 1. TYPOGRAPHY
+// ----------------------------------------------------------------------------- */
+:root {
+  --li1-width: 98%;
+  --li2-width: 48%;
+  --li3-width: 28%;
+}
+
+body {
+  background-color: #339FC3;
+  font-family: Arial, "微軟正黑體", "新細明體";
+  overflow-y: scroll;
+}
+
+.navbar-header {
+  background-color: #10253A;
+}
+
+.navbar-header .logo {
+  display: none;
+  float: left;
+  margin-left: 15px;
+}
+
+.navbar-inverse {
+  background-color: transparent;
+  border-color: transparent;
+}
+
+.navbar-inverse .navbar-collapse {
+  background-color: #10253A;
+}
+
+.pageHeader {
+  background: #FFFFFF;
+  height: 120px;
+  line-height: 120px;
+  margin-top: 50px;
+  text-align: center;
+  width: 100%;
+}
+
+.pageHeader img {
+  height: auto;
+  max-width: 100%;
+}
+
+/* mainMenu */
+.mainMenu {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.mainMenu ul {
+  border-width: 0;
+  display: flex;
+  justify-content: space-around;
+}
+
+.mainMenu ul li {
+  width: 33%;
+}
+
+.mainMenu ul li:nth-child(2) {
+  width: 34%;
+}
+
+.mainMenu ul li a {
+  display: block;
+  font-size: 24px;
+  font-weight: 700;
+  height: 200px;
+  margin: 0 auto;
+  padding-top: 140px;
+  text-align: center;
+  width: 200px;
+}
+
+.mainMenu ul li a.main1 {
+  background-image: url(../images/MG_01C.jpg);
+  background-position: center top;
+}
+
+.mainMenu ul li a.main2 {
+  background-image: url(../images/MG_02C.jpg);
+  background-position: center top;
+}
+
+.mainMenu ul li a.main3 {
+  background-image: url(../images/MG_03C.jpg);
+  background-position: center top;
+}
+
+.tab-content {
+  background-color: #5cb6ce;
+  overflow: hidden;
+  padding: 10px;
+}
+
+.tab-pane ul.col1 {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  padding: 0;
+}
+
+.tab-pane ul.col1 li {
+  background-color: #aaa;
+  display: block;
+  /* height: 200px; */
+  margin-bottom: 10px;
+  padding: 5px 5px;
+  position: relative;
+  text-align: center;
+  width: var(--li1-width);
+}
+
+.tab-pane ul.col1 li a {
+  color: #FFFFFF;
+  display: block;
+  font-size: 16px;
+  height: auto;
+  line-height: 1.8;
+  margin: 0 auto;
+  text-decoration: none;
+  max-width: 100%;
+}
+
+.tab-pane ul.col1 li a img {
+  height: 100%;
+  width: 100%;
+}
+
+.tab-pane ul.col2 {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  padding: 0;
+}
+
+.tab-pane ul.col2 li {
+  background-color: #aaa;
+  display: block;
+  margin-bottom: 10px;
+  padding: 5px 5px;
+  position: relative;
+  text-align: center;
+  width: var(--li2-width);
+}
+
+.tab-pane ul.col2 li:nth-child(2n+1):last-child {
+  margin-right: calc(((100% - var(--li2-width) * 2) / 4 * 3) + var(--li2-width));
+}
+
+.tab-pane ul.col2 li a {
+  color: #FFFFFF;
+  display: block;
+  font-size: 16px;
+  height: auto;
+  line-height: 1.8;
+  margin: 0 auto;
+  text-decoration: none;
+  max-width: 100%;
+}
+
+.tab-pane ul.col2 li a img {
+  height: 100%;
+  width: 100%;
+}
+
+.tab-pane ul.col3 {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  padding: 0;
+}
+
+.tab-pane ul.col3 li {
+  background-color: #aaa;
+  display: block;
+  margin-bottom: 10px;
+  padding: 5px 5px;
+  position: relative;
+  text-align: center;
+  width: var(--li3-width);
+}
+
+.tab-pane ul.col3 li:nth-child(3n+2):last-child {
+  margin-right: calc(((100% - var(--li3-width) * 3) / 6 * 2) + var(--li3-width));
+}
+
+.tab-pane ul.col3 li:nth-child(3n+1):last-child {
+  margin-right: calc(((100% - var(--li3-width) * 3) / 6 * 4) + var(--li3-width) * 2);
+}
+
+.tab-pane ul.col3 li a {
+  color: #FFFFFF;
+  display: block;
+  font-size: 16px;
+  height: auto;
+  line-height: 1.8;
+  margin: 0 auto;
+  text-decoration: none;
+  max-width: 100%;
+}
+
+.tab-pane ul.col3 li a img {
+  height: 100%;
+  width: 100%;
+}
+
+.footer {
+  margin-top: 20px;
+}
+
+.footer a {
+  color: #eeeeee;
+}
+
+#itemModal {
+  padding-left: 17px;
+}
+
+.modal.fade .modal-dialog {
+  -webkit-transform: translate(0);
+  -moz-transform: translate(0);
+  transform: translate(0);
+}
+
+.modal-dialog {
+  position: fixed;
+  margin: 15px auto;
+  width: calc(100% - 30px);
+  height: calc(100% - 30px);
+  padding: 0;
+}
+
+.modal-content {
+  border: 2px solid #3c7dcf;
+  border-radius: 10px;
+  box-shadow: none;
+  height: 100%;
+  left: 50%;
+  position: absolute;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+}
+
+.modal-title {
+  font-size: 1.5em;
+  font-weight: 700;
+  color: #333333;
+  line-height: 30px;
+}
+
+.close:focus {
+  color: #333;
+  outline-width: 0;
+}
+
+.modal-body {
+  border-radius: 0 0 10px 10px;
+  height: calc(100% - 61px);
+  overflow: auto;
+}
+
+@media screen and (max-width: 767px) {
+  .navbar-header .logo {
+    display: inline-block;
+  }
+
+  .mainMenu {
+    margin-top: 70px;
+    margin-bottom: 20px;
+  }
+
+  .pageHeader {
+    margin-left: -15px;
+    width: calc(100% + 30px);
+    display: none;
+  }
+}
+
+
+@media screen and (max-width: 700px) {
+  .mainMenu ul li a {
+    font-size: 20px;
+    font-weight: bold;
+  }
+
+  .mainMenu ul li a {
+    height: 100%;
+    width: 100%;
+    transform: scale(0.9);
+    transition: all 1s ease 0s;
+  }
+
+  .tab-pane ul.col2 li {
+    width: 100%;
+  }
+
+  .tab-pane ul.col2 li:nth-child(2n+1):last-child {
+    margin-right: auto;
+  }
+
+  .tab-pane ul.col3 li {
+    width: 100%;
+  }
+
+  .tab-pane ul.col3 li:nth-child(3n+1):last-child {
+    margin-right: auto;
+  }
+
+  .tab-pane ul.col3 li:nth-child(3n+2):last-child {
+    margin-right: auto;
+  }
+}
+
+@media screen and (max-width: 520px) {
+  .pageHeader {
+    display: none;
+  }
+
+  .tab-pane ul.col2 li {
+    width: 100%;
+  }
+
+  .tab-pane ul.col2 li:nth-child(2n+1):last-child {
+    margin-right: auto;
+  }
+
+  .tab-pane ul.col3 li {
+    width: 100%;
+  }
+
+  .tab-pane ul.col3 li:nth-child(3n+1):last-child {
+    margin-right: auto;
+  }
+
+  .tab-pane ul.col3 li:nth-child(3n+2):last-child {
+    margin-right: auto;
+  }
+
+  .mainMenu ul li a {
+    font-size: 18px;
+    font-weight: bold;
+  }
+}
